@@ -5,8 +5,11 @@
 
 header{
     width: 100%;
+    height: 6vw;
     display: inline-block;
     background-color: orange;
+    position: absolute;
+    left: 20vw;
 }
 
 ul{
@@ -79,4 +82,87 @@ a:hover{
 .botao:active {
     box-shadow: 2px 3px 1px;
     transform: translate(4px, 6px);
+}
+
+.navbar .botao
+{
+    margin: 5px;
+}
+
+.sidebar .botao
+{
+    margin-bottom: 10px;
+}
+
+/* Side Bar*/
+.sidebar{
+    height: 1200px;
+    width: 20vw;
+    position: absolute;
+    background-color: orange;
+}
+
+/* Main */
+
+.content{
+    height: 1200px;
+    width: 80vw;
+    position: absolute;
+    left: 21vw;
+    top: 6vw;
+}
+
+/* Loader */
+/* Estilo do elemento */
+.loader {
+    /* Define a largura e altura do elemento como 48 pixels */
+    width: 48px;
+    height: 48px;
+    /* Cria uma borda sólida de 3 pixels de largura na cor azul */
+    border: 3px solid blue;
+    /* Torna o elemento circular com um raio de borda de 50% */
+    border-radius: 50%;
+    /* Define o elemento como um bloco em linha */
+    display: inline-block;
+    /* Define a posição do elemento como relativa */
+    position: relative;
+    /* Garante que a largura e altura incluam a borda e o preenchimento */
+    box-sizing: border-box;
+    /* Aplica uma animação chamada "rotation" com duração de 1 segundo, temporização linear e execução infinita */
+    animation: rotation 1s linear infinite;
+}
+
+/* Define um pseudoelemento "::after" para criar um efeito de rotação*/
+.loader::after {
+    /* Define o conteúdo do pseudoelemento como vazio */
+    content: '';
+    /* Garante que a largura e altura incluam a borda e o preenchimento */
+    box-sizing: border-box;
+    /* Define a posição do pseudoelemento como absoluta em relação ao elemento pai */
+    position: absolute;
+    /* Posiciona o pseudoelemento no centro horizontal e vertical do elemento pai */
+    left: 50%;
+    top: 50%;
+    /* Move o pseudoelemento de volta em 50% de sua largura e altura, centralizando-o */
+    transform: translate(-50%, -50%);
+    /* Define a largura e altura do pseudoelemento como 40 pixels */
+    width: 40px;
+    height: 40px;
+    /* Torna o pseudoelemento circular com um raio de borda de 50% */
+    border-radius: 50%;
+    /* Cria uma borda sólida de 3 pixels de largura com cor transparente, exceto na parte inferior, onde é vermelha */
+    border: 3px solid transparent;
+    border-bottom-color: red;
+}
+
+/* Define uma animação de keyframes chamada "rotation" para criar o efeito de rotação */
+@keyframes rotation {
+    /* Define o estado inicial da animação com uma rotação de 0 graus */
+    0% {
+        transform: rotate(0deg);
+    }
+    /* Define o estado final da animação com uma rotação completa de 360 graus */
+    100% {
+        transform: rotate(360deg);
+    }
 }
