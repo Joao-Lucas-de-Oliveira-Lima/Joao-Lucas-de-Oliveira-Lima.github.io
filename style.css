@@ -53,8 +53,30 @@ a:hover{
     display: block;
 }
 
-
+/*
 .dropdown:hover .dropdown-content {
     background-color: orangered;
     display: block;
+}
+*/
+
+.dropdown-button:focus + .dropdown-content {
+    display: block;
+}
+
+/* Botões*/
+
+.botao {
+    background-color: aqua;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 3px 7px 5px;
+    transition: transform 400ms, box-shadow 400ms;
+}
+
+.botao:active {
+    box-shadow: 2px 3px 1px;
+    transform: translate(4px, 6px);
 }
