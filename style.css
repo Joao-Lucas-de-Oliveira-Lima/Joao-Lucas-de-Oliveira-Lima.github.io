@@ -1,0 +1,60 @@
+.logo{
+    height: 40px;
+    width: 100px;
+}
+
+header{
+    width: 100%;
+    display: inline-block;
+    background-color: orange;
+}
+
+ul{
+    list-style: none;
+}
+
+.navbar > ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+a{
+    padding: 10px
+}
+
+a:hover{
+    background-color: orangered;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    list-style: none; /* Remover marcadores de lista */
+    padding: 0;
+    margin: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    padding: 12px 16px;
+}
+
+.dropdown-content a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+
+.dropdown:hover .dropdown-content {
+    background-color: orangered;
+    display: block;
+}
